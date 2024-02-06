@@ -44,9 +44,17 @@ const todos = (state = initialState, action) => {
       return state.filter((item) => item.id !== todosId); //TODO: 여기 작성
 
     case SWITCH_TODO:
-      const isDone = action.payload
-      return; //TODO: 여기 작성
-
+      const switchTargetId = action.payload
+      const switchMappedList = state.map((item) => {
+        if (item.id === switchTargetId) {
+          return {
+            ...item,
+            isDone: !item.isDone,
+          }
+        }
+        return item;
+      })
+      return switchMappedList;
     default:
       return state;
   }

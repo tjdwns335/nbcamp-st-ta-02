@@ -15,6 +15,14 @@ function FormGroup() {
       body,
       isDone: false,
     }
+    if (!title) {
+      alert('제목을 입력해주세요');
+      return
+    }
+    if (!body) {
+      alert('내용을 입력해주세요');
+      return
+    }
     dispatch(addTodo(newTodo));
   }
   const titleChange = (e) => {

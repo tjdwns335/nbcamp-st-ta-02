@@ -6,7 +6,8 @@ function Main() {
   return (
     <>
       <FormGroup />
-      <TodoList />
+      <TodoList isActive={false} />
+      <TodoList isActive={true} />
     </>
   )
 }

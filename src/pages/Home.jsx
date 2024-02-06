@@ -2,15 +2,20 @@ import React from "react";
 import Header from "../components/Header";
 import Main from "../components/Main";
 import Footer from "../components/Footer";
+import styled from "styled-components";
 
 const Home = () => {
   return (
-    <div>
+    <HomeWrap>
       <Header />
       <Main />
       <Footer />
-    </div>
+    </HomeWrap>
   );
 };
 
 export default Home;
+
+const HomeWrap = styled.div`
+  
+`
